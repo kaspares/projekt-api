@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Kurier = require("../routes/models/kurier");
+const Kurier = require("../models/kurier");
 
 exports.kurierzy_get_all = (req, res, next) => {
     Kurier.find()

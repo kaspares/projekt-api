@@ -3,16 +3,16 @@ const mongoose = require("mongoose");
 // Schemat Przesyłki
 const paczkaSchema = mongoose.Schema({
     _id: mongoose.Types.ObjectId,
-    kodPaczki: String, // Kod przesyłki
+    kodPaczki: String, 
     kurier: { 
         type: mongoose.Schema.Types.ObjectId, 
-        ref: "Kurier" // Referencja do Kuriera
+        ref: "Kurier" 
     },
     paczkomat: { 
         type: mongoose.Schema.Types.ObjectId, 
-        ref: "Paczkomat" // Referencja do Paczkomatu
+        ref: "Paczkomat"     
     },
-    status: String // Opcjonalnie: status przesyłki
+    status: String 
 });
 
 module.exports = mongoose.model("Paczka", paczkaSchema);

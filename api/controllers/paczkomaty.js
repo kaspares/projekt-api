@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Paczkomat = require("../routes/models/paczkomat");
+const Paczkomat = require("../models/paczkomat");
  
 exports.paczkomaty_get_all = (req, res, next) => {
     Paczkomat.find()
@@ -91,7 +91,7 @@ exports.paczkomaty_delete = (req, res, next) => {
 }
 
 // Wyświetlanie paczek w paczkomacie
-const Paczka = require("../routes/models/paczka");
+const Paczka = require("../models/paczka");
 
 exports.get_paczki_by_paczkomat = (req, res, next) => {
     const paczkomatId = req.params.paczkomatId;

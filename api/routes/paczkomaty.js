@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const checkAuth = require("../routes/middleware/checkAuth")
+const checkAuth = require("../middleware/checkAuth")
 
 const PaczkomatController = require("../controllers/paczkomaty")
 

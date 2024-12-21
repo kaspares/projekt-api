@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 //importujemy model
-const Paczka = require("../routes/models/paczka");
+const Paczka = require("../models/paczka");
 
 exports.paczki_get_all = (req, res, next) => {
     Paczka.find()

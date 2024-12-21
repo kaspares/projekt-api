@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken")
 //import bcrypt
 const bcrypt = require("bcrypt")
 //importujemy model
-const User = require("../routes/models/user");
+const User = require("../models/user");
 const { token } = require("morgan");
 
 //zakładanie konta
@@ -37,7 +37,7 @@ router.post("/login", (req, res, next) => {
         
             bcrypt.compare(req.body.password, user.password, (err, result) => {
                 if(err) return res.status(500).json({wiadomosc: err})
-                if(!result) return res.status(404).json({wiadomosc: "Złe hasło"})
+                if(!result) return res.status(404).json({wiadomosc: "Złe dane"})
                 //jak jest ok to zwracam JWT token
                const token = jwt.sign({user: user._id, email: user.email},process.env.JWT_KEY, { expiresIn: "1d"})
                 return res.status(200).json(token)
