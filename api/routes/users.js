@@ -1,0 +1,49 @@
+const express = require("express")
+const router = express.Router();
+const mongoose = require("mongoose")
+const jwt = require("jsonwebtoken")
+//import bcrypt
+const bcrypt = require("bcrypt")
+//importujemy model
+const User = require("../routes/models/user");
+const { token } = require("morgan");
+
+//zakładanie konta
+router.post("/signup",(req, res, next) => {
+    bcrypt.hash(req.body.password, 10, (err, hash) => {
+        if(err) return res.status(500).json({wiadomosc: err})
+
+        const user = new User({
+            _id: new mongoose.Types.ObjectId(),
+            email: req.body.email,
+            password: hash
+        })
+
+    user
+    .save()
+    .then(() => res.status(201).json({wiadomosc: "Dodano uzytkownika"}))
+    })
+
+})
+ 
+//logowanie
+router.post("/login", (req, res, next) => {
+    //najpierw sprawdzam czy jest taki email
+    User
+    .findOne({email: req.body.email})
+    .then(user => {
+        //jesli jest to pobieram obiket usera
+        if (!user) return res.status(401).json({wiadomosc: "Błąd autoryzacji"})
+        
+            bcrypt.compare(req.body.password, user.password, (err, result) => {
+                if(err) return res.status(500).json({wiadomosc: err})
+                if(!result) return res.status(404).json({wiadomosc: "Złe hasło"})
+                //jak jest ok to zwracam JWT token
+               const token = jwt.sign({user: user._id, email: user.email},process.env.JWT_KEY, { expiresIn: "1d"})
+                return res.status(200).json(token)
+            })
+    })
+    //weryfikuję hasha 
+})
+ 
+module.exports = router
