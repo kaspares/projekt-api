@@ -11,7 +11,7 @@
 - **[Metrics Endpoints](##metrics-endpoints)**<br>
 
 # backend-api
-Back-end RESTful API
+Back-end REST API
 
 # Getting Started
 
@@ -22,25 +22,41 @@ These instructions will get you a copy of the project up and running on your loc
 A step by step series of examples that tell you how to get a development environment running
 `cd` into `server` folder and install dependencies with:
 
-```
-yarn or npm install
-```
-
-Then launch the api with: 
-
-```
-yarn or npm run server
-```
+1. Clone the repository:
+   - git clone https://github.com/kaspares/projekt-api.git
+2. Open terminal and install dependencies:
+   - npm install
+3. Create file .env and write:
+   DB_USER= <yourname>
+   DB_PASSWORD= <yourpassword>
+   DB_NAME= <databasename>
+   JWT_KEY= <secret>
+4. Create connection to your database
+5.Then launch the api with: 
+nodemon server.js
 
 # Overview
-- Creating campaigns and seeing predictions for how successful they will be.
+- The application allows you to manage parcel lockers, parcels, and couriers. Users can create, edit, and delete parcel lockers, parcels, and assign couriers. The system provides easy tracking of parcels and organizing their delivery.
+  <strong>Functioncs:</strong>
+  - Creating and managing parcel lockers
+  - Creating and managing parcels
+  - Adding, editing, and deleting couriers
+  - Assigning parcels to parcel lockers and couriers
+  - Checking which parcels are in a specific parcel locker
 
 # Back-end 
 
-API's | RDBMS and Data Persistence | Authentication | Form Testing
+<strong>API's</strong>
+The back-end exposes a set of RESTful API endpoints to interact with parcel lockers, parcels, and couriers. These endpoints allow users to create, read, update, and delete the necessary data. The API also supports querying for parcels in specific parcel lockers and assigning couriers to parcels.
+
+<strong>RDBMS and Data Persistence</strong>
+The application uses MongoDB with Mongoose for data storage and management. MongoDB is a NoSQL database that stores data in a flexible, JSON-like format. Mongoose is used to define schemas and models for the different entities, such as parcel lockers, parcels, and couriers, and handle interactions with the database. All data is persisted in MongoDB, ensuring future retrieval and analysis.
+
+<strong>Authentication</strong>
+The application implements authentication mechanisms, such as JWT (JSON Web Tokens), to ensure that only authorized users can access or modify data (e.g., creating or updating parcels or lockers). Users must log in to receive an authentication token, which they include in the header of their API requests.
 
 # API Endpoints
-Use Base URL: https://kickstarter-success-bw.herokuapp.com/
+Use Base URL: http://localhost:3000/
 
 Register & Login 
 | Method | Route                  | Description                                      |
