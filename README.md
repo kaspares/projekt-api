@@ -47,12 +47,15 @@ nodemon server.js
 # Back-end 
 
 <strong>API's</strong>
+
 The back-end exposes a set of RESTful API endpoints to interact with parcel lockers, parcels, and couriers. These endpoints allow users to create, read, update, and delete the necessary data. The API also supports querying for parcels in specific parcel lockers and assigning couriers to parcels.
 
 <strong>RDBMS and Data Persistence</strong>
+
 The application uses MongoDB with Mongoose for data storage and management. MongoDB is a NoSQL database that stores data in a flexible, JSON-like format. Mongoose is used to define schemas and models for the different entities, such as parcel lockers, parcels, and couriers, and handle interactions with the database. All data is persisted in MongoDB, ensuring future retrieval and analysis.
 
 <strong>Authentication</strong>
+
 The application implements authentication mechanisms, such as JWT (JSON Web Tokens), to ensure that only authorized users can access or modify data (e.g., creating or updating parcels or lockers). Users must log in to receive an authentication token, which they include in the header of their API requests.
 
 # API Endpoints
