@@ -95,60 +95,43 @@ Paczki
 
 ## Register Endpoint
 ```js
-POST /api/auth/register
+POST /users/signup 
 ```
 Expected Body 
 ```js
     {
-    "username": "new_user", // string, unique, required
+    "email": "example@gmail.com", // string, unique, required
     "password": "password", // string, required
-    "age": 18, // integer, required
-    "email": "JaneDoe@gmail.com" // string, unique, required
     }
 ```
 
 Expected Response
 ```js
-    {
-        "id": 4,
-        "username": "new_user",
-        "password": "$2a$08$Sp/WntMm7eAZnDn3tp40tOAp77T8CTMUel8bqZGD3CoJcuSrH.NZ6",
-        "email": "JaneDoe@gmail.com",
-        "age": 18
-    }
+{
+    "wiadomosc": "Dodano uzytkownika"
+}
 ```
 
 ## Login Endpoint
 ```js
-POST /api/auth/login
+POST /users/login 
 ```
 Expected Body
 ```js
 {
-    "username": "test_user",
-    "password": "password"
+    "email: "example@gmail.com",
+    "password": "example123"
 }
 ```
 Expected Response
 ```js
 {
-    "message": "Welcome test_user",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxMiwidXNlcm5hbWUiOiJuZXdfdXNlcjEyMTIxMiIsImlhdCI6MTU5ODQyMDg0NywiZXhwIjoxNTk4NDI4MDQ3fQ.YyR_rrRxYaDVTt3FPM155hPwbUAEFhyaDSOWqVOD8kM"
 }
 ```
 
-## Logout Endpoint
-```js
-GET /api/auth/logout
-```
-Expected Response 
-```js
-{
-    "message": "successfully logged out"
-}
-```
 
-## Campaign Endpoints
+## Kurierzy Endpoints
 ### GET All campaigns
 ```js
 GET /api/campaigns
