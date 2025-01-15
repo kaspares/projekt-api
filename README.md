@@ -64,37 +64,34 @@ Use Base URL: http://localhost:3000/
 Register & Login 
 | Method | Route                  | Description                                      |
 |--------|------------------------|--------------------------------------------------|
-| POST   | /api/auth/register     | registers new users                              |
-| POST   | /api/auth/login        | logins into user account                         |
-| GET    | /api/auth/logout       | logs out of user account                         |
+| POST   | /users/signup          | registers new users                              |
+| POST   | /users/login           | logins into user account                         |
 
-Campaigns
+Kurierzy
 | Method | Route                  | Description                                      |
 |--------|------------------------|--------------------------------------------------|
-| GET    | /api/campaigns         | returns array of campaigns in database           |
-| GET    | /api/campaigns/:id     | returns campaigns specified by :id  --NOT READY  |
-| PUT    | /api/campaigns/:id     | updates campaign specified by :id                |
-| POST   | /api/campaigns         | creates & returns new campaign                   |
-| DELETE | /api/campaigns/:id     | deletes campaign specified by :id                |
+| GET    | /kurierzy              | returns array of kurierzy in database            |
+| GET    | /kurierzy/:id          | returns kurierzy specified by :id                |
+| PUT    | /kurierzy/:id          | updates kurier specified by :id                  |
+| POST   | /kurierzy              | creates & returns new kurier                     |
+| DELETE | /kurierzy/:id          | deletes kurier specified by :id                  |
 
-
-Users
-| Method | Route                  | Description                                      |
-|--------|------------------------|--------------------------------------------------|
-| GET    | /api/users             | returns array of users                           |
-| GET    | /api/users/:id         | returns user specified by :id                    |
-| PUT    | /api/users/:id         | updates user specified by :id                    |
-| DELETE | /api/user/:id          | deletes user specified by :id                    |
-
-Metrics
+Paczkomaty
 | Method | Route                      | Description                                  |
 |--------|----------------------------|----------------------------------------------|
-| POST   | /api/campaigns/:id/metrics | returns array of photos                      |
-<!-- | GET    | /api/photos/:id       | returns photos specified by :id                   |
-| POST   | /api/photos           | creates & returns new story                       |
-| PUT    | /api/photos/:id       | updates photos specified by :id                   |
-| DELETE | /api/photos/:id       | deletes photos specified by :id                   | -->
+| GET    | /paczkomaty                | returns array of paczkomaty                  |
+| GET    | /paczkomaty/:id/paczki     | returns array of paczki in paczkoma      |
+| post   | /paczkomaty                | creates & returns new paczkomat              |
+| PUT    | /paczkomaty/:id            | updates paczkomat specified by :id           |
+| DELETE | /paczkomaty/:id            | deletes paczkomat specified by :id           | 
 
+Paczki
+| Method | Route                      | Description                                  |
+|--------|----------------------------|----------------------------------------------|
+| GET    | /paczki                    | returns array of paczki                      |
+| post   | /paczki                    | creates & returns new paczka                 |
+| PUT    | /paczki/:id                | updates paczkomat specified by :id           |
+| DELETE | /paczki/:id                | deletes paczkomat specified by :id           | 
 
 ## Register Endpoint
 ```js
