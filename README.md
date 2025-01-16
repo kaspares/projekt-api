@@ -36,7 +36,7 @@ A step by step series of examples that tell you how to get a development environ
 nodemon server.js
 
 # Overview
-- The application allows you to manage parcel lockers, parcels, and couriers. Users can create, edit, and delete parcel lockers, parcels, and assign couriers. The system provides easy tracking of parcels and organizing their delivery.
+The application allows you to manage parcel lockers, parcels, and couriers. Users can create, edit, and delete parcel lockers, parcels, and assign couriers. The system provides easy tracking of parcels and organizing their delivery.
   <strong>Functioncs:</strong>
   - Creating and managing parcel lockers
   - Creating and managing parcels
