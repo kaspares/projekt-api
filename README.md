@@ -6,7 +6,7 @@
 - **[API Endpoints](#api-endpoints)**<br>
 - **[Register Endpoint](##register-endpoint)**<br>
 - **[Login Endpoint](##login-endpoint)**<br>
-- **[Logout Endpoint](##logout-endpoint)**<br>
+- **[Kurier Endpoint](##Kurier-Endpoints)**<br>
 - **[Campaign Endpoints](##campaign-endpoint)**<br>
 - **[Metrics Endpoints](##metrics-endpoints)**<br>
 
