@@ -80,7 +80,8 @@ Paczkomaty
 | Method | Route                      | Description                                  |
 |--------|----------------------------|----------------------------------------------|
 | GET    | /paczkomaty                | returns array of paczkomaty                  |
-| GET    | /paczkomaty/:id/paczki     | returns array of paczki in paczkoma      |
+| GET    | /paczkomaty/:id            | returns array of paczkomat by ID             |
+| GET    | /paczkomaty/:id/paczki     | returns array of paczki in paczkomat         |
 | post   | /paczkomaty                | creates & returns new paczkomat              |
 | PUT    | /paczkomaty/:id            | updates paczkomat specified by :id           |
 | DELETE | /paczkomaty/:id            | deletes paczkomat specified by :id           | 
@@ -89,6 +90,7 @@ Paczki
 | Method | Route                      | Description                                  |
 |--------|----------------------------|----------------------------------------------|
 | GET    | /paczki                    | returns array of paczki                      |
+| GET    | /paczki/:id                | returns array of paczka by ID                |
 | post   | /paczki                    | creates & returns new paczka                 |
 | PUT    | /paczki/:id                | updates paczkomat specified by :id           |
 | DELETE | /paczki/:id                | deletes paczkomat specified by :id           | 
