@@ -27,10 +27,10 @@ A step by step series of examples that tell you how to get a development environ
 2. Open terminal and install dependencies:
    - npm install
 3. Create file .env and write:
-   DB_USER= <yourname>
-   DB_PASSWORD= <yourpassword>
-   DB_NAME= <databasename>
-   JWT_KEY= <secret>
+   - DB_USER= yourname
+   - DB_PASSWORD= yourpassword
+   - DB_NAME= databasename
+   - JWT_KEY= secret
 4. Create connection to your database
 5. Then launch the api with: 
 nodemon server.js
