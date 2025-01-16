@@ -4,9 +4,9 @@
 - **[Overview](#overview)**<br>
 - **[Back-end](#back-end)**<br>
 - **[API Endpoints](#api-endpoints)**<br>
-- **[Register Endpoint](##register-endpoint)**<br>
-- **[Login Endpoint](##login-endpoint)**<br>
-- **[Kurier Endpoint](##kurier-endpoints)**<br>
+- **[Register Endpoint](#register-endpoint)**<br>
+- **[Login Endpoint](#login-endpoint)**<br>
+- **[Kurier Endpoint](#kurier-endpoints)**<br>
 - **[Campaign Endpoints](##campaign-endpoint)**<br>
 - **[Metrics Endpoints](##metrics-endpoints)**<br>
 
