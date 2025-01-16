@@ -7,8 +7,8 @@
 - **[Register Endpoint](#register-endpoint)**<br>
 - **[Login Endpoint](#login-endpoint)**<br>
 - **[Kurier Endpoint](#kurier-endpoints)**<br>
-- **[Campaign Endpoints](##campaign-endpoint)**<br>
-- **[Metrics Endpoints](##metrics-endpoints)**<br>
+- **[Paczkomaty Endpoints](#paczkomaty-endpoints)**<br>
+- **[Paczki Endpoints](#paczki-endpoints)**<br>
 
 # backend-api
 Back-end REST API
